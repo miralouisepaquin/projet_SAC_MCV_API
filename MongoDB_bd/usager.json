@@ -1,0 +1,10 @@
+[
+    {"nom":"Paquin", 
+    "prenom":"Mira",
+    "mail":"mira@rdl.com",
+    "password":""},
+    {"nom":"Dubé", 
+    "prenom":"Alain",
+    "mail":"alain@rdl.com",
+    "password":""}   
+]

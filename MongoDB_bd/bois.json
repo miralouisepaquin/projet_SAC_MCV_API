@@ -1,0 +1,17 @@
+[
+    {"nom":"Erable", 
+    "type":"Dure",
+    "origine":"CAN",
+    "temps_sechage":"20",
+    "temperature_min":"20"},
+    {"nom":"Pin", 
+    "type":"Mou",
+    "origine":"US",
+    "temps_sechage":"21",
+    "temperature_min":"22"},
+    {"nom":"Bouleau", 
+    "type":"Dure",
+    "origine":"CAN",
+    "temps_sechage":"25",
+    "temperature_min":"20"}    
+]
