@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Projet Intégration</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    </head>
+    <body>
+        <main> 
+            <div class="droite">
+                <img src="images/SAC.jpg" alt="SAC">
+                <h2>Type de bois</h2>
+                <select id="bois_select">
+                    <option value="Erable">Érable</option>
+                    <option value="Pin">Pin</option>
+                    <option value="Bouleau">Bouleau</option>
+                </select>
+
+                <h2>Caractéristiques</h2>
+                <div class="affichage_droit"> 
+                    <div class="affichage">
+                        <label for="bois">Bois:</label><input type="text" id="bois_affichage" value="Dure">
+                    </div>                   
+                    <div class="affichage">
+                        <label for="type">Type:</label><input type="text" id="type" value="Erable">
+                    </div>
+                    <div class="affichage">
+                        <label for="origine">Origine:</label><input type="text" id="origine" value="US">
+                    </div>
+                    <div class="affichage">
+                        <label for="temp_sechage">Temps de séchage:</label><input type="text" id="temp_sechage" value="20 sec">
+                    </div>
+                    <div class="affichage">
+                        <label for="temp_min">Température min.:</label><input type="text" id="temp_min" value="21 ¤C">
+                    </div>                    
+                </div>
+            </div>  
+              
+            <div class="gauche"> 
+                <h2>Contrôle du four de séchage</h2>
+                <div class="affichage_gauche">
+                    <label for="temperature">Température du four:</label>
+                    <input class="temp_four" type="text" id="temp_four" value="22.00 ¤C">
+                    <button class="demarrer" id="demarrer">Démarrer</button> 
+                    <div class="utilisation">
+                        <input type="text" id="type" value="Erable">
+                        <input type="text" id="courant_necessaire" value="15s / 20 sec">
+                        <input type="text" id="temp_min" value="min: 21 ¤C">
+                        <button class="button_utilisation" id="utilisation"></button>
+                    </div>
+                </div>                             
+            </div>        
+        </main>
+    </body>
+</html>
