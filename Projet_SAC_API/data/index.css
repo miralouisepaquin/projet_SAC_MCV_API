@@ -1,0 +1,119 @@
+/****************************************************************
+		
+	Fichier :	
+	Description : Feuille de style globale CSS
+	Auteur : 	
+	Version (date) :  		
+	Couleurs : 		
+					
+****************************************************************/
+body
+{
+    width: auto;
+    margin: auto;
+    padding:2%;
+    font-family: Verdana, serif;
+}
+
+main
+{
+    display: flex;
+    margin: auto;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+img{
+    height: 200px;
+    width: 75%;    
+}
+
+select
+{
+    margin: 2%;
+    font-size: large;
+    background-color:lightblue;
+}
+
+input
+{
+    background-color: transparent;
+    border: none;
+    text-align: center;
+}
+
+button
+{
+    border: solid;
+    border-radius: 7px;
+}
+
+.droite, .gauche
+{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.affichage_droit, .affichage_gauche
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-style: solid;
+    border-radius: 7px;
+    padding: 2%;
+}
+
+.droite
+{
+    width: 30%;
+}
+
+.gauche
+{
+    width: 60%;
+    padding-top: 5%;
+}
+.affichage_gauche
+{
+    align-items: center;
+    min-height: 325px;  
+}
+
+.affichage
+{
+    display: flex;
+    justify-content: space-between;  
+}
+
+.temp_four
+{
+    font-size: xx-large;
+}
+
+.demarrer
+{
+    background-color: darkcyan;
+    font-size: large;
+}
+
+
+.utilisation
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.resultats
+{
+    display: flex;
+    width: 25%;
+}
+
+

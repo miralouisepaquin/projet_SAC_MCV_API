@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Projet Intégration</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="index.css" />
+        <script type="text/javascript" src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    </head>
+    <body onload="getFromESP_getTemperatureMin()">
+        <main> 
+            <div class="droite">
+                <img src="SAC.png" alt="SAC">
+                <h2>Type de bois</h2>
+                <select id="typeBois_ListBox_Select">
+                    <option value="test">Test</option>
+                </select>
+                <button onclick="getFromESP_getAllWoods()">Refresh</button>
+
+                <h2>Caractéristiques</h2>
+                <div class="affichage_droit"> 
+                    <div class="affichage">
+                        <label for="bois">Bois:</label><input type="text" id="bois_affichage" value="Dure">
+                    </div>                   
+                    <div class="affichage">
+                        <label for="type">Type:</label><input type="text" id="type" value="Erable">
+                    </div>
+                    <div class="affichage">
+                        <label for="origine">Origine:</label><input type="text" id="origine" value="US">
+                    </div>
+                    <div class="affichage">
+                        <label for="temp_sechage">Temps de séchage:</label><input type="text" id="temp_sechage" value="20 sec">
+                    </div>
+                    <div class="affichage">
+                        <label for="temp_min">Température min.:</label><input type="text" id="temp_min" value="21 ¤C">
+                    </div>                    
+                </div>
+            </div>  
+              
+            <div class="gauche"> 
+                <h2>Contrôle du four de séchage</h2>
+                <div class="affichage_gauche">
+                    <label class="temp_four">Température en ¤C</label>
+                    <div id="temp" class="temp_four">20</div>
+                    <button class="demarrer" id="demarrer" onclick="doAction('startAction')">Démarrer</button>
+                    <div class="utilisation">
+                        <div id="type">Érable</div>
+                        <div class="resultats"><div id="temps_actuel">15s</div><div>/</div><div id="temps_sechage">20 sec</div></div>
+                        <div class="resultats"><div>min:</div><div id="temperature_min">21</div></div>
+                        <button id="color"></button>                    
+                    </div>
+                </div>                             
+            </div>        
+        </main>
+    </body>
+</html>
