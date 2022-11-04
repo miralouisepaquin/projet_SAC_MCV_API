@@ -105,26 +105,31 @@ void MyServer::initAllRoutes() {
         http.begin(apiRestAddress); 
         http.GET(); 
         String response = http.getString();
-
-        Serial.println(response);
+        //Permet de valider si [] au extrémité et les enlever
+        if(response[0]=='[')
+            response[0] =' ';
+        if(response[response.length()-1]==']')
+            response[response.length()-1] =' ';
 
         String tempToSend;
         StaticJsonDocument<5000> doc;
         deserializeJson(doc, response);
         JsonObject obj1 = doc.as<JsonObject>();
-        std::string boisId;
-        String  nomBois;
+        std::string wood;
+        String  woodName;
       
         for (JsonPair kv1 : obj1) {
-            boisId = kv1.key().c_str();
-            Serial.print("Element : ");Serial.println(boisId.c_str());
+            wood = kv1.key().c_str();
+            Serial.print("Element : ");Serial.println(wood.c_str());
+            Serial.print("Value : ");Serial.println(kv1.value().as<String>());
 
-            JsonObject elem = obj1[boisId];
-            nomBois = elem["nom"].as<String>();
-            if(tempToSend!="") tempToSend += "&";
-            tempToSend +=  String(boisId.c_str()) + String("&") + String(nomBois.c_str());
-           
-            Serial.print(nomBois);Serial.print(" ");
+            JsonObject elem = obj1[wood];
+            woodName = elem["nom"].as<String>();
+            Serial.print(woodName);
+
+            /*if(tempToSend!="") tempToSend += "&";
+            tempToSend += String(wood.c_str()) + String("&") + String(woodName.c_str());
+            Serial.print(woodName);Serial.print(" ");*/
                           
             //Pour parcourir les éléments de l'objet
             //for (JsonPair kv2 : elem) {
