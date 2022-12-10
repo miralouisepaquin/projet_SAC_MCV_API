@@ -1,12 +1,12 @@
 /**
-    Class MyOledView : Gestion d'une VUE pour le OLed
-    @file MyButton.h 
-    @author Alain Dubé
-    @version 1.1 21/09/20 
+    Class MyOledViewInitialisation : Initialisation des valeur pour le OLed
+    @file MyOledViewInitialisation.h 
+    @author Mira Paquin
+    @version 1.1 01/12/2022 
     
     Historique des versions   
                             Versions  Date      Auteur      Description
-                            1.1      21/09/20   Ald         Première version de la classe
+                            1.1      01/12/2022   MLP         Première version de la classe
                             
                             
     platform = espressif32
@@ -19,7 +19,7 @@
     
     Exemple d'utilisation 
         //Définition 
-            #include "MyOledView.h"
+            #include "MyOledViewInitialisation.h"
             class MyOledViewInitialisation: public MyOledView {
                 public:
                 
@@ -32,31 +32,25 @@
         myOled->displayView(myOledViewInitialisation);
 **/
 
-
-#ifndef MYOLEDVIEW_H
-#define MYOLEDVIEW_H
+#define MYOLEDVIEWINITIALISATION_H
 
 #include <Adafruit_SSD1306.h>
+#include "MyOledView.h"
 #include <string>
-#include <vector>
-using std::vector;
 
-class MyOledView {
+class MyOledViewInitialisation: public MyOledView {
     
     public:
-        virtual void display( Adafruit_SSD1306 *adafruit) = 0;
-        void setParams(std::string tag, std::string value);
-        std::string getTag(std::string tag);
-                
-        void init(std::string _id);
-        std::string id();
-
-        virtual void update(Adafruit_SSD1306 *adafruit) = 0;
+        void setNomDuSysteme(std::string val);
+        void setIdDuSysteme(std::string val);
+        void setSensibiliteBoutonAction(std::string val);
+        void setSensibiliteBoutonReset(std::string val);
 
     private:
-        int findTag(std::string tag);
-        std::string myId;
-        vector<std::string> params;
-      
+        std::string nomDuSysteme;
+        std::string idDuSysteme;
+        std::string SensibiliteBoutonAction;
+        std::string SensibiliteBoutonReset;   
+        void display(Adafruit_SSD1306 *adafruit);
+        void update(Adafruit_SSD1306 *adafruit);         
 };
-#endif
