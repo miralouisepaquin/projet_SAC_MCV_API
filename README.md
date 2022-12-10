@@ -33,7 +33,7 @@ Créer un projet en utilsant la plateforme ESP32-DEV-KIT et coller les dossiers 
 
 Il faut importer les bonnes librairies:
 
-  •adafruit/DHT sensor library@^1.4.4 
+  	•adafruit/DHT sensor library@^1.4.4 
 	•adafruit/Adafruit Unified Sensor@^1.1.6 
 	•ESPAsyncWebServer-esphome 
 	•AsyncTCP-esphome
